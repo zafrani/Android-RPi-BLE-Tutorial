@@ -8,7 +8,7 @@ console.log("Peripheral Ready")
 
 const bleno = require('bleno');
 
-const peripheral_uuid= '00000000-0000-0000-0000-000000000000'
+const peripheral_uuid= '00000000000000000000000000000000'
 
 // ----------------------------------------- 
 // |    Initialization
@@ -44,7 +44,7 @@ bleno.on('disconnect', function(clientAddress) {
 // ----------------------------------------- 
 
 function advertise(){
-  bleno.startAdvertising("Android RPi BLE Tutorial", [pizzaService.uuid], function(err) {
+  bleno.startAdvertising("Android RPi BLE Tutorial", [peripheral_uuid], function(err) {
       if (err) {
         console.log(err);
       }
