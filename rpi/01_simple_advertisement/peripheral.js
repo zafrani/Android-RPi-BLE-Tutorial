@@ -1,7 +1,5 @@
 // Peripheral
 
-console.log("Peripheral Ready")
-
 // ----------------------------------------- 
 // |    Fields
 // ----------------------------------------- 
@@ -13,6 +11,8 @@ const peripheral_uuid= '00000000000000000000000000000000'
 // ----------------------------------------- 
 // |    Initialization
 // ----------------------------------------- 
+
+console.log("Peripheral Started")
 
 bleno.on('stateChange', function(state) {
     console.log('on -> stateChange: ' + state);
